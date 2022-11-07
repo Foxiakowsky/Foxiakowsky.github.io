@@ -1,0 +1,59 @@
+.dark{
+    --background: rgb(71, 71, 71);
+    --primary: rgb(144, 84, 255);
+    --secondary: rgb(204, 176, 255);
+    --text: white;
+    --img: url("background.jpg");
+}
+.light{
+    --background: rgb(255, 255, 255);
+    --primary: rgb(255, 184, 84);
+    --secondary: rgb(255, 223, 179);
+    --text: black;
+    --img: url("background2.jpg");
+}
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+    transition: ease-in 0.4s;
+}
+body{
+    background-color: var(--background);
+}
+header{
+    background-color: var(--primary);
+    padding: 20px;
+    color: white;
+}
+header button{
+    border: none;
+    background-color: initial;
+    cursor: pointer;
+}
+header button:hover{
+    color: black;
+}
+#triangle{
+    clip-path: polygon(91% 85%, 0 0, 100% 0);
+    background-image: var(--img);
+    padding: 1em;
+    padding-bottom: 5.5em;
+    margin-bottom: 1em;
+    text-align: center;
+    padding-top: 20px;
+    animation: infinite 60s movement;
+    background-size: cover;
+}
+@keyframes movement{
+    0% {
+        clip-path: polygon(91% 85%, 0 0, 100% 0);
+    }
+    50% {
+        clip-path: polygon(48% 100%, 0 0, 100% 0);
+    }
+    0% {
+        clip-path: polygon(91% 85%, 0 0, 100% 0);
+    }
+}
